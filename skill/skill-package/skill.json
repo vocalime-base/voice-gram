@@ -1,0 +1,80 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "it-IT": {
+          "summary": "Voice Gram ti permette di leggere e inviare messaggi Telegram tramite Alexa.",
+          "examplePhrases": [
+            "Alexa, apri Voice Gram",
+            "Alexa, avvia Voice Gram"
+          ],
+          "keywords": [
+            "telegram",
+            "messaggi",
+            "comunicazione",
+            "whatsapp",
+            "inviare",
+            "sms",
+            "testo",
+            "text",
+            "messenger",
+            "line",
+            "messaggio",
+            "email",
+            "e-mail",
+            "mail"
+          ],
+          "name": "Voice Gram",
+          "description": "Con Voice Gram puoi controllare il tuo account Telegram tramite Alexa. Ascolta i messaggi non letti e scrivi ai tuoi contatti con la comodità della voce.\n\n⚙️ COME CONFIGURARE LA SKILL? ⚙️\n\nPer poter configurare la skill, dovrai aver installato sul tuo smartphone sia l\u0027app Alexa sia l\u0027app Telegram.\n\nPer iniziare, attiva la skill tramite l\u0027app Alexa. Dalla pagina della skill, cliccando su IMPOSTAZIONI, potrai iniziare il processo di collegamento del tuo account Telegram. In alternativa, apri la skill dicendo \"Alexa, apri Voice Gram\". Riceverai, sempre sull\u0027app Alexa, una notifica da seguire per associare il tuo account.\n\nPer collegare il tuo account Telegram alla skill ti verrà chiesto di:\n- Inserire il tuo numero di telefono\n- Immettere il codice di accesso a 5 cifre che avrai ricevuto tramite messaggio Telegram\n\nEseguiti questi due passaggi, riceverai un messaggio Telegram di conferma. Se leggerai che l\u0027accesso al tuo account è stato eseguito da Dublino (Irlanda) non c\u0027è nulla di cui preoccuparsi. Si tratta della posizione dei server di Amazon.\nHurrà! A questo punto puoi utilizzare tutte le funzionalità della skill. \n\n☝️COSA SI PUÒ FARE CON LA SKILL? ☝️\n\nQuando apri la skill e hai messaggi Telegram non letti, ti viene proposto di ascoltarli e, se vuoi, di rispondere. \nTi viene proposto di leggere solo messaggi da chat, gruppi e/o canali che non hai silenziato.\n\nIn ogni momento, puoi chiedere alla skill di inviare un messaggio, ad esempio dicendo \"voglio mandare un messaggio\". Ti verrà chiesto il nome del contatto o del gruppo Telegram a cui vuoi scrivere e il testo del messaggio. Questione di pochi attimi e il tuo messaggio verrà inviato.\n\nQualche accorgimento:\n- Quando detti un nuovo messaggio da inviare, assicurati che non sia troppo lungo. Dopo averlo inviato, la skill ti chiederà se vuoi mandare altri messaggi allo stesso contatto, in modo da aggiungere facilmente altre informazioni.\n- Non è per ora possibile inviare messaggi vocali tramite Voice Gram. È tuttavia possibile riprodurre i messaggi vocali ricevuti.\n- Se i messaggi da leggere contengono foto o video, la skill te lo segnalerà, così che potrai visionarli tramite lo smartphone.\n\n---\n\nQuesta skill è un client non ufficiale basato sull\u0027API Telegram.\nPer dubbi o segnalazioni sull\u0027utilizzo della skill, scrivi una mail a vittorio@vocalime.com",
+          "smallIconUri": "",
+          "updatesDescription": "",
+          "largeIconUri": ""
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "open, link your telegram account and enjoy",
+      "category": "COMMUNICATION",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "INSERT_LAMBDA_ARN_HERE"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::devices:all:notifications:write"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": true,
+      "locales": {
+        "it-IT": {
+          "termsOfUseUrl": "",
+          "privacyPolicyUrl": ""
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    },
+    "events": {
+      "endpoint": {
+        "uri": "INSERT_LAMBDA_ARN_HERE"
+      },
+      "publications": [
+        {
+          "eventName": "AMAZON.MessageAlert.Activated"
+        }
+      ]
+    }
+  }
+}

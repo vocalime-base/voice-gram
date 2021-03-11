@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Build Layer dependencies
+
+Resources:
+    layer:
+        Type: AWS::Serverless::LayerVersion
+        Properties:
+            LayerName: voice-gram-layer
+            Description: VoiceGram dependecies
+            CompatibleRuntimes:
+                - python3.8
+            ContentUri: layer/
+            RetentionPolicy: Retain
+        Metadata:
+            BuildMethod: python3.8

@@ -1,0 +1,19 @@
+# IDE
+**/.idea/
+.git.old/
+
+# Python
+*/**/__pycache__/
+*/**/venv/
+
+# Builds
+skill/lambda/.aws-sam/
+
+# ASK
+skill/.ask/
+
+# Terraform
+# UNCOMMENT THE FOLLOWING LINE BEFORE PUSHING YOUR ENV VARIABLES
+# terraform/secret.auto.tfvars
+terraform/.terraform/
+terraform/plans/

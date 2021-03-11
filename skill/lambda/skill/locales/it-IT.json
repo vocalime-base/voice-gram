@@ -1,0 +1,74 @@
+{
+    "LaunchRequest": {
+        "speech": {
+            "sendMessage": "Ciao %{name}! Non hai nuovi messaggi da leggere. Vuoi inviarne uno? "
+        }
+    },
+    "SendMessageIntent": {
+        "elicit": {
+            "repeatChatName": "Puoi ripetere il nome del contatto o del gruppo a cui vuoi inviare il messaggio? ",
+            "chatName": "Ora dimmi il nome del contatto o del gruppo a cui vuoi inviare il messaggio. ",
+            "text": "Cosa vuoi scrivere nel messaggio? ",
+            "appendText": "Cosa vuoi aggiungere? ",
+            "action": "Dimmi se vuoi inviare il messaggio, modificarlo o aggiungere altro? ",
+            "unexpected": "Scusa, non ho capito. Puoi inviare il messaggio, modificarlo o aggiungere altro. Cosa vuoi fare? "
+        },
+        "speech": {
+            "cantReply": "Non puoi inviare messaggi a %{chatName}. ",
+            "sendAnotherMessage": "Ok! Vuoi inviare un altro messaggio? ",
+            "messageSent": "Inviato! Vuoi scrivere altro a %{chatName}? ",
+            "messageNotSent": "Non sono riuscita ad inviare il messaggio. Per piacere, riprova. ",
+            "chatNotFound": "Non ho trovato %{chatName} tra le tue chat. ",
+            "chatFound": "Ho trovato %{chatName} tra le tue chat. ",
+            "textCheck": "Ho capito, %{text}. "
+        }
+    },
+    "ReadMessageIntent": {
+        "speech": {
+            "canReply": "Vuoi rispondere? ",
+            "cantReply": "Non puoi rispondere a questa chat <break strength=\"x-strong\"/> ",
+            "service": "Apri l'app di Telegram per visualizzare questo messaggio di servizio",
+            "media": "Sono presenti alcuni allegati, usa l'app di Telegram per visualizzarli",
+            "limit": "Ti leggerò gli ultimi 10. ",
+            "groupMessage": "%{sender} ha scritto, %{text} <break strength=\"strong\"/> ",
+            "chat": {
+                "one": "Hai un nuovo messaggio. %{messages} <break strength=\"x-strong\"/> ",
+                "many": "Hai %{count} nuovi messaggi. %{limit} %{messages} <break strength=\"x-strong\"/> "
+            },
+            "recap": {
+                "zero": "Ciao %{name}! Non hai ricevuto nuovi messaggi. ",
+                "one": "Ciao %{name}! Hai nuovi messaggi da %{lastChat}. Vuoi ascoltarli? ",
+                "many": "Ciao %{name}! Hai %{unreadMessages} nuovi messaggi in %{count} conversazioni. Hai ricevuto messaggi da %{chats} e %{lastChat}. Vuoi ascoltare quelli di %{firstChat}? "
+            },
+            "middleRecap": {
+                "zero": "Non hai più messaggi da leggere. Vuoi inviarne uno?",
+                "one": "Hai nuovi messaggi anche da %{lastChat}. Vuoi ascoltarli? ",
+                "many": "Hai ricevuto messaggi anche da %{chats} e %{lastChat}. Vuoi ascoltare quelli di %{firstChat}? "
+            }
+        }
+    },
+    "RepeatIntent": {
+        "speech": {
+            "noMessage": "Non ho nessun messaggio da rileggere. Cosa vuoi fare? "
+        }
+    },
+    "FallbackIntent": {
+        "speech": {
+            "text": "<say-as interpret-as=\"interjection\">oh no</say-as>, non sono riuscita a comprendere la tua richiesta. Puoi ripetere? "
+        }
+    },
+    "HelpIntent": {
+        "speech": {
+            "noAccountLinked": "Per utilizzare questa skill devi collegare il tuo account Telegram. Per fare ciò apri l'app Alexa e segui le istruzioni che ti ho inviato. ",
+            "authorized": "Per inviare un messaggio dimmi, invia un messaggio. Per farmi leggere gli ultimi messaggi dimmi, leggi i messaggi. "
+        }
+    },
+    "StopIntent": {
+        "speech": {
+            "close": "Ok, alla prossima. "
+        }
+    },
+    "Errors": {
+        "noAccountLinked": "Ciao! Per utilizzare questa skill devi collegare il tuo account Telegram. Segui le istruzioni contenute nella documentazione di questo progetto. "
+    }
+}

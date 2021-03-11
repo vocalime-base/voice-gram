@@ -1,0 +1,264 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "voice gram",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "annulla"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "aiuto"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "fermo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": [
+            "vai alla home"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "SendMessageIntent",
+          "slots": [
+            {
+              "name": "chatName",
+              "type": "chatNameSlot",
+              "samples": [
+                "scrivi a {chatName}",
+                "manda a {chatName}",
+                "invia a {chatName}",
+                "{chatName}"
+              ]
+            },
+            {
+              "name": "text",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "scrivi {text}",
+                "invia {text}",
+                "voglio inviare {text}",
+                "{text}"
+              ]
+            },
+            {
+              "name": "action",
+              "type": "ActionSlot",
+              "samples": [
+                "vorrei {action}",
+                "voglio {action}",
+                "{action}"
+              ]
+            }
+          ],
+          "samples": [
+            "vorrei spedire un messaggio",
+            "voglio spedire un messaggio",
+            "spedire un messaggio",
+            "scriviamo un messaggio",
+            "vorrei inviare un messaggio",
+            "vorrei mandare un messaggio",
+            "inviare messaggio",
+            "scrivere un messaggio",
+            "mandare un messaggio",
+            "inviare un messaggio",
+            "voglio mandare un messaggio",
+            "voglio scrivere un messaggio",
+            "voglio inviare un messaggio",
+            "scrivi",
+            "scrivi un messaggio",
+            "manda un messaggio",
+            "invia un messaggio"
+          ]
+        },
+        {
+          "name": "ReadMessageIntent",
+          "slots": [],
+          "samples": [
+            "leggimi i messaggi",
+            "fam mi ascoltare i messaggi",
+            "fammi ascoltare i messaggi",
+            "fam mi sentire i messaggi",
+            "fammi sentire i messaggi",
+            "voglio ascoltare i messaggi",
+            "leggere i messaggi",
+            "voglio leggere i messaggi",
+            "leggi mi i messaggi",
+            "leggi i messaggi"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "edit",
+              "name": {
+                "value": "modifica",
+                "synonyms": [
+                  "no voglio modificare",
+                  "modificare",
+                  "modificarlo",
+                  "cambia il testo"
+                ]
+              }
+            },
+            {
+              "id": "appendText",
+              "name": {
+                "value": "aggiungi",
+                "synonyms": [
+                  "includere altro",
+                  "aggiungere del testo",
+                  "aggiungere altro",
+                  "aggiungi del testo",
+                  "continua il messaggio",
+                  "continua il testo",
+                  "aggiungi altro testo",
+                  "continua"
+                ]
+              }
+            },
+            {
+              "id": "sendMessage",
+              "name": {
+                "value": "invia",
+                "synonyms": [
+                  "spedire il messaggio",
+                  "spedisci il messaggio",
+                  "inviare il messaggio",
+                  "mandare il messaggio",
+                  "inviarlo",
+                  "mandarlo",
+                  "voglio mandarlo",
+                  "mandare",
+                  "inviare",
+                  "mandalo",
+                  "invialo",
+                  "manda il messaggio",
+                  "manda",
+                  "invia il messaggio"
+                ]
+              }
+            }
+          ],
+          "name": "ActionSlot"
+        },
+        {
+          "values": [
+            {
+              "id": "me",
+              "name": {
+                "value": "me",
+                "synonyms": [
+                  "me stesso"
+                ]
+              }
+            }
+          ],
+          "name": "chatNameSlot"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SendMessageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "chatName",
+              "type": "chatNameSlot",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.76241482775.1120104512105"
+              }
+            },
+            {
+              "name": "text",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.76241482775.1034583598171"
+              }
+            },
+            {
+              "name": "action",
+              "type": "ActionSlot",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.631279839465.546138977784"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ReadMessageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        }
+      ],
+      "delegationStrategy": "SKILL_RESPONSE"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.76241482775.1034583598171",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "che messaggio vuoi inviare?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.76241482775.1120104512105",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "a chi vuoi inviare il messaggio?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.631279839465.546138977784",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Vuoi inviare il messaggio o aggiungere altro testo?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "19"
+}
